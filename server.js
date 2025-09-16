@@ -14,10 +14,16 @@ app.use(express.urlencoded({ extended: true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
+app.post("/create-item", function (req, res) {
+    console.log(req.body);
+    res.json({test: "success"});
+});
+
 // 4 routing code
 app.get("/", function (req, res) {
-    res.end("<h1>HELLO WORLD by Ray</h1");
+    res.render("harid");
 });
+
 
 const server = http.createServer(app);
 let PORT = 3000;
