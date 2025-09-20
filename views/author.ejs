@@ -1,0 +1,304 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/main.css"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="layout">
+        <div class="sidebar">
+          <div class="profile">
+            <div class="profile-photo">
+              <img
+                src="images/Profile.png"
+                width="156px"
+                height="142px"
+                alt=""
+              />
+            </div>
+            <div class="profile-name"><%=user.name%></div>
+            <div class="profile-role color_1"><%=user.profession%></div>
+            <div class="social-links">
+              <a class="social-link" href="">
+                <div class="social-icon">
+                  <img src="icon/instagram.svg" class="social-icon-img" alt="여기에 사진 있음"/>
+                </div>
+              </a>
+              <a class="social-link" href="">
+                <div class="social-icon">
+                  <img src="icon/Youtube.svg" class="social-icon-img" alt="여기에 사진 있음" />
+                </div>
+              </a>
+              <a class="social-link" href="">
+                <div class="social-icon">
+                  <img src="icon/Facebook.svg" class="social-icon-img" alt="여기에 사진 있음" />
+                </div>
+              </a>
+
+              <a class="social-link" href="">
+                <div class="social-icon">
+                  <img src="icon/Twitter.svg" class="social-icon-img" alt="여기에 사진 있음" />
+                </div>
+              </a>
+
+              <a class="social-link" href="">
+                <div class="social-icon">
+                  <img src="icon/Linkeding.svg" class="social-icon-img" alt="여기에 사진 있음" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <!-- inso qismi -->
+          <div class="info">
+            <div class="info-row">
+              <p class="info-label"><%=user.age%></p>
+              <p>24</p>
+            </div>
+            <div class="info-row">
+              <p class="info-label">Residence :</p>
+              <p><%=user.residence%></p>
+            </div>
+            <div class="info-row">
+              <p class="info-label">Freelance:</p>
+              <p class="status-available">Available</p>
+            </div>
+            <div class="info-row">
+              <p class="info-label">Address :</p>
+              <p><%=user.city%></p>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <!-- language qismi -->
+          <div class="languages-card">
+            <h3>Languages</h3>
+            <div class="lang-row color_1">
+              <p><%=user.languages[0] %></p>
+              <p>100%</p>
+            </div>
+            <div class="lang-bar"><div class="bar-fill"></div></div>
+            <div class="lang-row color_1">
+              <p><%=user.languages[1] %></p>
+              <p>90%</p>
+            </div>
+            <div class="lang-bar"><div style="width: 90%" class="bar-fill"></div></div>
+            <div class="lang-row color_1">
+              <p><%=user.languages[2] %></p>
+              <p>60%</p>
+            </div>
+            <div class="lang-bar"><div style="width: 60%" class="bar-fill"></div></div>
+          </div>
+          <div class="marginer"></div>
+
+          <!-- skills -->
+
+          <div class="skills-card">
+            <h4>Skills</h4>
+            <div class="skill-row color_1">
+              <p><%=user.skills[0] %></p>
+              <p>100%</p>
+            </div>
+            <div class="skill-bar"><div class="bar-fill"></div></div>
+            <div class="skill-row color_1">
+              <p><%=user.skills[1] %></p>
+              <p>90%</p>
+            </div>
+            <div class="skill-bar">
+              <div style="width: 90%" class="skill-fill"></div>
+            </div>
+            <div class="skill-row color_1">
+              <p><%=user.skills[2] %></p>
+              <p>80%</p>
+            </div>
+            <div class="skill-bar">
+              <div style="width: 80%" class="skill-fill"></div>
+            </div>
+            <div class="skill-row color_1">
+              <p><%=user.skills[3] %></p>
+              <p>70%</p>
+            </div>
+            <div class="skill-bar">
+              <div style="width: 70%" class="skill-fill"></div>
+            </div>
+            <div class="skill-row color_1">
+              <p><%=user.skills[4] %></p>
+              <p>60%</p>
+            </div>
+            <div class="skill-bar">
+              <div style="width: 60%" class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <!-- Extra skills -->
+
+          <div class="extras-card">
+            <h5>Extra Skills</h5>
+            <div class="extra-row">
+              <img
+                class="bullet-icon"
+                style="height: 15px; width: 15px"
+                src="icon/Icons.svg"
+                alt=""
+              />
+              <p class="color_1"><%=user.extra_skills[0] %></p>
+            </div>
+            <div class="extra-row">
+              <img
+                class="bullet-icon"
+                style="height: 15px; width: 15px"
+                src="icon/Icons.svg"
+                alt=""
+              />
+              <p class="color_1"><%=user.extra_skills[1] %></p>
+            </div>
+            <div class="extra-row">
+              <img
+                class="bullet-icon"
+                style="height: 15px; width: 15px"
+                src="icon/Icons.svg"
+                alt=""
+              />
+              <p class="color_1"><%=user.extra_skills[2] %></p>
+            </div>
+            <div class="extra-row">
+              <img
+                class="bullet-icon"
+                style="height: 15px; width: 15px"
+                src="icon/Icons.svg"
+                alt=""
+              />
+              <p class="color_1"><%=user.extra_skills[3] %></p>
+            </div>
+          </div>
+          <div class="marginer"></div>
+        </div>
+        <div class="content">
+          <div class="hero">
+            <div>
+              <h1>Doctor neurologists in OHSU Hospital </h1>
+              <p style="text-transform: capitalize" class="hero-text color_1"><%=user.about_me %></p>
+              <p class="cta-hire">HIRE ME →</p>
+            </div>
+            <img
+              style="
+                width: 325.72px;
+                height: 459.09px;
+                top: 8px;
+                left: 921.68px;
+                gap: 0px;
+                opacity: 0px;
+              "
+              src="images/Image1.svg"
+              alt="여기에 사진 있음"
+            />
+          </div>
+          <div class="section-title"><h5>My Services</h5></div>
+
+          <div class="section-subtitle">
+            <p style="text-transform: capitalize" class="color_1"><%=user.service_desc %></p>
+          </div>
+          <div class="services-row-1">
+            <div style="height: 225px" class="service-card">
+              <img src="icon/coding.svg" alt="" />
+              <p>Web development</p>
+              <p class="color_1">Blog, E-commerce</p>
+            </div>
+            <div class="service-card">
+              <img src="icon/Photographer.svg" alt="" />
+              <p>UI/UX Design</p>
+              <p class="color_1">Mobile app, Website Design</p>
+            </div>
+            <div class="service-card">
+              <img src="icon/Microphone.svg" alt="" />
+              <p>Sound Design</p>
+              <p>Voice over, Beat Making</p>
+            </div>
+          </div>
+          <div class="services-row-2">
+            <div class="service-card">
+              <img src="icon/game-development.svg" alt="" />
+              <p>Game Design</p>
+              <p class="color_1">Character Design, Props & Objects</p>
+            </div>
+            <div class="service-card">
+              <img src="icon/Photographer.svg" alt="" />
+              <p>Photography</p>
+              <p class="color_1">portrait, product photography</p>
+            </div>
+            <div class="service-card">
+              <p>Advertising</p>
+              <p style="text-transform: capitalize" class="color_1 text111">
+                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit. Vitae nulla diam in ac dictum a urna viverra morbi.
+              </p>
+              <img
+                style="width: 86px; height: 20px"
+                src="icon/Ordernow.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-rail">
+          <div>
+            <p
+              style="
+                padding-top: 30px;
+                margin-bottom: 200px;
+                width: 30px;
+                height: 30px;
+              "
+            >
+              <img src="btn_icon/icons_Contrast.svg" alt="" />
+            </p>
+          </div>
+          <div class="nav-menu">
+            <div class="nav-item">
+              <img
+                style="width: 65px; height: 78px"
+                src="btn_icon/Home.svg"
+                alt=""
+              />
+            </div>
+            <div class="nav-item">
+              <img style="width: 40px; height: 40px" src="btn_icon/Cv.svg" alt="" />
+            </div>
+            <div class="nav-item">
+              <img
+                style="width: 40px; height: 40px"
+                src="btn_icon/Portfolio.svg"
+                alt=""
+              />
+            </div>
+            <div class="nav-item">
+              <img
+                style="width: 40px; height: 40px"
+                src="btn_icon/Blog.svg"
+                alt=""
+              />
+            </div>
+            <div class="nav-item">
+              <img
+                style="width: 40px; height: 40px"
+                src="btn_icon/Contact.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 1 yillik umrimni yegan portfolio -->
