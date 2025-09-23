@@ -14,7 +14,7 @@ function harfSon(letter, text) {
         }
         return harf;
     }
-    console.log(harfSon('A', 'assalomu alekom'));
+    console.log(harfSon('a', 'assalomu alekom'));
 
     console.log("=====");
 
@@ -103,7 +103,3 @@ async function run() {
     console.log(javob);
 }
 run();
-
-
-
-
