@@ -27,7 +27,7 @@ app.post("/create-item", function (req, res) {
     console.log(req.body); 
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja: new_reja}, (err, data) =>  {
-        res.json(data.ops[0]);
+        res.json(data.ops[0]); 
     });
 });
 
@@ -36,7 +36,7 @@ app.post("/create-item", function (req, res) {
 app.post("/delete-item", (req, res) => {
     const id = req.body.id;
 
-    db.collection("plans").deleteOne(
+    db.collection("plans").deleteOne( 
     { _id: new mongodb.ObjectId(id) },
     function(err, data) {
         res.json({ state: "success"});
@@ -44,6 +44,30 @@ app.post("/delete-item", (req, res) => {
     );
     
 });
+
+//edit uchun kodlar
+
+app.post("/edit-item", (req, res) => {
+    const data = req.body.id;
+    console.log(data);
+    db.collection("plans").findOneAndUpdate(
+        {_id: new mongodb.ObjectId(data.id)}, 
+        {$set: {reja: data.new_input}}, 
+        function(err, data) {
+            res.json({ state: "success"});
+        }
+    );
+});
+
+// hammasini o;chisirish uchun kod...
+
+app.post("/delete-all", (req, res) => {
+    if(req.body.delete_all) {
+        db.collection("plans").deleteMany(function () {
+            res.json({ state: "hamma rejalarni o'chirish"});
+        });
+    }
+    });
 
 
 
