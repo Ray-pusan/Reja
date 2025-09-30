@@ -1,3 +1,31 @@
+/*TASK D : 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string 
+bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+ */
+
+function checkContent(str1, str2) {
+
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+
+    const checkStr1 = str1.split('').sort().join('');
+    const checkStr2 = str2.split('').sort().join('');
+
+        return checkStr1 === checkStr2;
+}
+
+
+console.log(checkContent('devex', 'xeved'));
+
+
+
+
+
+
+
+
 /* Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot 
 pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va 
 biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
@@ -8,48 +36,48 @@ return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 */
 
 
-const moment = require('moment');
-const time = moment().format("HH:mm");
+// const moment = require('moment');
+// const time = moment().format("HH:mm");
 
-class Shop {
+// class Shop {
 
-    constructor(non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    }
+//     constructor(non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     }
 
-    qoldiq() {
-        console.log(`Hozir ${time}da Non ${this.non}ta, lagmon ${this.lagmon}ta, cola ${this.cola}ta mavjud!!!`);
-    }
+//     qoldiq() {
+//         console.log(`Hozir ${time}da Non ${this.non}ta, lagmon ${this.lagmon}ta, cola ${this.cola}ta mavjud!!!`);
+//     }
 
-    sotish(productName, quantity) {
-        if(this[productName] !== undefined ) {
-            if(this[productName] >=  quantity) {
-                this[productName] -= quantity
-                console.log(`${time}da, ${productName} ${quantity}ta sotildi`);
+//     sotish(productName, quantity) {
+//         if(this[productName] !== undefined ) {
+//             if(this[productName] >=  quantity) {
+//                 this[productName] -= quantity
+//                 console.log(`${time}da, ${productName} ${quantity}ta sotildi`);
                 
-            } else {
-                console.log(`Uzur ${time}da, ${productName} ${quantity}ta yetarli emas`);
-            }
-        } else {
-            console.log(`${productName} mahsuloti mavjud emas!!!`);
-        }
-    }
+//             } else {
+//                 console.log(`Uzur ${time}da, ${productName} ${quantity}ta yetarli emas`);
+//             }
+//         } else {
+//             console.log(`${productName} mahsuloti mavjud emas!!!`);
+//         }
+//     }
 
-    qabul(productName, quantity) {
-        this[productName] += quantity;
-        console.log(`${time}da, ${productName} ${quantity}ta qabul qilindi`);
+//     qabul(productName, quantity) {
+//         this[productName] += quantity;
+//         console.log(`${time}da, ${productName} ${quantity}ta qabul qilindi`);
         
-    }
+//     }
 
-}
-// CALL
-const shop1 = new Shop(4, 1, 9);
+// }
+// // CALL
+// const shop1 = new Shop(4, 1, 9);
 
-shop1.qoldiq();
-shop1.sotish('non', 1);
-shop1.sotish('olma', 1);
+// shop1.qoldiq();
+// shop1.sotish('non', 1);
+// shop1.sotish('olma', 1);
 
 
 
