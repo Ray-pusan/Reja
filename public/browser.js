@@ -48,7 +48,7 @@ document.addEventListener("click", function (e) {
         axios
             .post("/delete-item", {id: e.target.getAttribute("data-id") })
         .then((response) => {
-            console.log("deleted",response.data);
+            console.log("deleted", response.data);
             e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {
@@ -60,7 +60,9 @@ document.addEventListener("click", function (e) {
     if(e.target.classList.contains("edit-me")) {
         let userInput = prompt("O'zgartirish kiriting", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
         if(userInput) {
-            axios.post("/edit-item", {id: e.target.getAttribute("data-id"),
+            axios
+            .post("/edit-item", {id: e.target.getAttribute("data-id"),
+                new_input: userInput,
             })
             .then((response) => {
                 console.log(response.data);
