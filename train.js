@@ -1,3 +1,25 @@
+/* E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+
+function getReverse(str) {
+    if(typeof str === "string") {
+        return str.split("").reverse().join("")
+    } else {
+        console.log("iltimos matn kiriting");
+    }
+}
+
+console.log(getReverse('hello'));
+
+
+
+
+
+
 /*TASK D : 
 
 Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string 
@@ -5,19 +27,19 @@ bir hil harflardan iborat bolsa true aks holda false qaytarsin
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
  */
 
-function checkContent(str1, str2) {
+// function checkContent(str1, str2) {
 
-    str1 = str1.toLowerCase();
-    str2 = str2.toLowerCase();
+//     str1 = str1.toLowerCase();
+//     str2 = str2.toLowerCase();
 
-    const checkStr1 = str1.split('').sort().join('');
-    const checkStr2 = str2.split('').sort().join('');
+//     const checkStr1 = str1.split('').sort().join('');
+//     const checkStr2 = str2.split('').sort().join('');
 
-        return checkStr1 === checkStr2;
-}
+//         return checkStr1 === checkStr2;
+// }
 
 
-console.log(checkContent('devex', 'xeved'));
+// console.log(checkContent('devex', 'xeved'));
 
 
 
