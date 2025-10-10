@@ -1,3 +1,24 @@
+/* TASK G:
+
+Yagona parametrga ega function tuzing.
+Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+
+MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.*/
+
+
+function getHighestIndex(arr) {
+    let max = Math.max(...arr);
+
+    return arr.indexOf(max);
+}
+console.log(getHighestIndex([4, 1, 0, 15, 17, 3, 9]));
+
+
+
+
 /*
 TASK-F
 
@@ -9,18 +30,18 @@ MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takror
 */
 
 
-function findDoublers(str) {
-    for(let i = 0; i < str.length; i++) {
-        if(str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
-            return true;
-        }
-    }
-    return false;
-}
+// function findDoublers(str) {
+//     for(let i = 0; i < str.length; i++) {
+//         if(str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 
-console.log(findDoublers("zoom"));
-console.log(findDoublers("false"));
+// console.log(findDoublers("zoom"));
+// console.log(findDoublers("false"));
 
 
 

@@ -31,7 +31,7 @@ app.post("/create-item", function (req, res) {
     });
 });
 
-// detele qilish uchun yozilgan kodlar....
+// detele qilish uchun yozilgan kodlar
 
 app.post("/delete-item", (req, res) => {
     const id = req.body.id;
@@ -63,6 +63,7 @@ app.post("/edit-item", (req, res) => {
 
 app.post("/delete-all", (req, res) => {
     if(req.body.delete_all) {
+        // console.log(req.body.delete_all);
         db.collection("plans").deleteMany(function () {
             res.json({ state: "hamma rejalarni o'chirish"});
         });
